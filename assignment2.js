@@ -24,7 +24,10 @@ function countDownTimer(seconds) {
             setTimeout(function() {
                 tickMessage.textContent = "Countdown Finished!";
                 console.log("Countdown Finished!");
-                alert("Countdown Finished!"); 
+                function countdownFinished() {
+                    alert("Countdown Finished!"); 
+                }
+                setInterval(countdownFinished, 5000);
             }, 2000);
         } else {
             tickMessage.textContent = "Current Count: " + timeLeft +" seconds!";
@@ -33,4 +36,5 @@ function countDownTimer(seconds) {
         timeLeft -= 1;
     }, 1000);  
 };
-countDownTimer(10)
+countDownTimer(10);
+

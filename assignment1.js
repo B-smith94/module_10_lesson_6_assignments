@@ -19,7 +19,7 @@ async function fetchCharacterData(publicKey, characterName, ts, hash) {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const characterData = await fetchCharacterData('1a0c484f68687658d4aa72b855aa91ff', 'Spider-Man', '1', '7a832323767f2bc5c040068eb7819846');
+    const characterData = await fetchCharacterData('your public key', 'Hulk', '123', 'your md5 hash');
     const characterInfoElement = document.getElementById('character-info');
 
     characterInfoElement.innerHTML = `
